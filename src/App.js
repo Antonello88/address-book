@@ -22,7 +22,7 @@ function App() {
     <div className="App">
 
       <EntryForm  userData={userData}/>
-      <EntryList /> 
+      <EntryList contactInfo={contactInfo}/> 
       
     </div>
   );

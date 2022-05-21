@@ -20,9 +20,9 @@ function EntryForm ({userData}) {
     return (
     
         <form className='form' onSubmit={handleSubmit}>
-        <input type='text' name='inputName' placeholder='Nome' value={inputName} onChange={(e) => setInputName(e.target.value)} required />
-        <input type='text' name='inputSurname' placeholder='Cognome' value={inputSurname} onChange={(e) => setInputSurname(e.target.value)} required />
-        <input type='text' name='inputNum' placeholder='Numero' value={inputNum} onChange={(e) => setInputNum(e.target.value)} required />
+        <input type='text' name='Name' placeholder='Nome' value={inputName} onChange={(e) => setInputName(e.target.value)} required />
+        <input type='text' name='Surname' placeholder='Cognome' value={inputSurname} onChange={(e) => setInputSurname(e.target.value)} required />
+        <input type='text' name='Num' placeholder='Numero' value={inputNum} onChange={(e) => setInputNum(e.target.value)} required />
 
         <input type="submit" value="Aggiungi"/>
         </form>
