@@ -3,11 +3,19 @@ import {useState} from 'react'
 import EntryForm from '../EntryForm'
 
 
+function EntryList () {
 
-function EntryList (addEntryForm) {
     
+
+    const [userData, setUserData] = useState([])
+    
+
     return (
+        <>
+    
+
         <table>
+
             <thead>
                 <tr>
                     <th> Nome</th>
@@ -19,11 +27,12 @@ function EntryList (addEntryForm) {
             </thead>
 
             <tbody>
-            {addEntryForm && addEntryForm.map((entry) => (
+
+            {userData && userData.map((user) => (
                 <tr>
-                    <td>{entry.inputName}</td>
-                    <td>{entry.inputSurname}</td>
-                    <td>{entry.inputNum}</td>
+                    <td>{user.inputName}</td>
+                    <td>{user.inputSurname}</td>
+                    <td>{user.inputNum}</td>
 
                 </tr>
             ))}
@@ -35,6 +44,9 @@ function EntryList (addEntryForm) {
             </tbody>
 
         </table>
+
+    
+        </>
     )
 
 
