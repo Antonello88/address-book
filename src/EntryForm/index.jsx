@@ -11,8 +11,7 @@ function EntryForm ({userData}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-         userData(inputName, inputSurname, inputNum);
-        
+         userData(inputName, inputSurname, inputNum);    
     }
 
     
@@ -26,13 +25,7 @@ function EntryForm ({userData}) {
 
         <input type="submit" value="Aggiungi"/>
         </form>
-
-        
-
-    
     )
-
-
 }
 
 export default EntryForm

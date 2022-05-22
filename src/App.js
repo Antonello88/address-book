@@ -2,11 +2,13 @@ import { useState } from 'react';
 import './App.css';
 import EntryForm from './EntryForm';
 import EntryList from './EntryList';
+import SearchInput from './SearchInput';
 
 
 function App() {
 
   const [contactInfo, setContactInfo]=useState('');
+  const [filterInput, setFilterInput] = useState('')
 
   const userData = (inputName,inputSurname,inputNum) => {
     const contacts = {
@@ -22,7 +24,8 @@ function App() {
     <div className="App">
 
       <EntryForm  userData={userData}/>
-      <EntryList contactInfo={contactInfo}/> 
+      <SearchInput filterInput={filterInput} setFilterInput={setFilterInput}/> 
+      <EntryList contactInfo={contactInfo} filterInput={filterInput}/> 
       
     </div>
   );
